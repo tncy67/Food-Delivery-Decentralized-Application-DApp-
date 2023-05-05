@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Pickup</title>
+</head>
+<body>
+    <h1>Register a Restaurant</h1>
+    <form action="{{ url_for('register_restaurant') }}" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location">
+        <br>
+        <label for="keywords">Keywords (comma-separated):</label>
+        <input type="text" id="keywords" name="keywords">
+        <br>
+        <label for="category">Category:</label>
+        <select id="category" name="category">
+            <option value="0">Asian</option>
+            <option value="1">Mediterranean</option>
+            <option value="2">Other</option>
+        </select>
+        <br>
+        <label for="menu">Menu:</label>
+        <input type="text" id="menu" name="menu">
+        <br>
+        <label for="open_time">Open Time:</label>
+        <input type="number" id="open_time" name="open_time">
+        <br>
+        <label for="close_time">Close Time:</label>
+        <input type="number" id="close_time" name="close_time">
+        <br>
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
